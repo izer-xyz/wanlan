@@ -1,2 +1,6 @@
-# openwrt-imagebuilder-action-template
-Template repo for [openwrt-imagebuilder-action](https://github.com/izer-xyz/openwrt-imagebuilder-action)
+# Wanlan
+
+
+```
+# sysupgrade https://github.com/izer-xyz/wanlan/releases/latest/download/rpi-squashfs-sysupgrade.img.gz 
+```

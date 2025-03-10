@@ -1,0 +1,9 @@
+#!/bin/sh 
+
+grep -qxF 'dtoverlay=dwc2' /boot/config.txt \
+  || echo 'dtoverlay=dwc2' >> /boot/config.txt
+
+#grep -qxF 'modules-load=dwc2,g_ether' /boot/cmdline.txt \
+#  || echo 'modules-load=dwc2,g_ether' >> /boot/cmdline.txt
+
+exit 0

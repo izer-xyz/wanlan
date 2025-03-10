@@ -5,6 +5,6 @@ openwrt_version=24.10.0
 
 packages=tailscale luci kmod-usb-gadget kmod-usb-gadget-serial kmod-usb-gadget-eth kmod-usb-dwc2 -partx-utils -ppp -ppp-mod-pppoe 
 
-disabled_services=
+disabled_services=firewall
 
 debug=

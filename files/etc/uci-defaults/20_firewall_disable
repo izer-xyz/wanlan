@@ -1,7 +1,0 @@
-#!/bin/sh
-
-exit 0 
-
-service firewall stop
-service firewall disable
-exit 0

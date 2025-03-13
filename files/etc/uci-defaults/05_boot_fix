@@ -6,10 +6,10 @@ grep -qxF 'dtoverlay=dwc2' /boot/config.txt \
 grep -qxF 'dtoverlay=gpio-shutdown' /boot/config.txt \
    || echo 'dtoverlay=gpio-shutdown' >> /boot/config.txt
 
-grep -qF 'modules-load=dwc2,g_ether' /boot/cmdline.txt \
- || sed -i 's/rootwait/rootwait modules-load=dwc2,g_ether /g' /boot/cmdline.txt
-
 grep -qF 'ipv6.disable=1' /boot/cmdline.txt \
  || sed -i 's/rootwait/rootwait ipv6.disable=1 /g' /boot/cmdline.txt
  
+grep -qF 'modules-load=dwc2,g_ether' /boot/cmdline.txt \
+ || sed -i 's/rootwait/rootwait modules-load=dwc2,g_ether /g' /boot/cmdline.txt
+
 exit 0

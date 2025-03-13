@@ -1,5 +1,8 @@
 #!/bin/sh 
 
+echo $0 >> /dev/kmesg
+cat /boot/cmdline.txt >> /dev/kmesg
+
 grep -qxF 'dtoverlay=dwc2' /boot/config.txt \
    || echo 'dtoverlay=dwc2' >> /boot/config.txt
 

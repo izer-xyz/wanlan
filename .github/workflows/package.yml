@@ -28,6 +28,9 @@ jobs:
           find .
           cat config
           cat config >> $GITHUB_ENV
+
+      - name: Generate version file
+        run: |
           echo v${{ env.openwrt_version }}-${{ github.run_number }} > files/etc/version
        
       - name: Build openwrt image

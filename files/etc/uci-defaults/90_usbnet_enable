@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo $0: enable usb networking (usb0) >> /dev/kmsg
+
 [ "`uci get network.@device[0].ports`" == "usb0" ] && exit 0 # only enable if disabled
 
 uci set network.@device[0].ports='usb0'

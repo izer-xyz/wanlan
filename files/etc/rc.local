@@ -1,5 +1,7 @@
 # This file is from the default image to store audio state
 
+[ -e /tmp/reboot ] && reboot & 
+
 modprobe g_ether
 
 exit 0

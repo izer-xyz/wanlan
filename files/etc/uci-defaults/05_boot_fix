@@ -12,4 +12,4 @@ grep -qF 'ipv6.disable=1' /boot/cmdline.txt \
 grep -qF 'modules-load=dwc2,g_ether' /boot/cmdline.txt \
  || sed -i 's/rootwait/rootwait modules-load=dwc2,g_ether /g' /boot/cmdline.txt
 
-exit 0
+reboot

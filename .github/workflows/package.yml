@@ -28,6 +28,7 @@ jobs:
           find .
           cat config
           cat config >> $GITHUB_ENV
+          echo v${{ env.openwrt_version }}-${{ github.run_number }} > files/etc/version
        
       - name: Build openwrt image
         uses: izer-xyz/openwrt-imagebuilder-action@v5
@@ -53,4 +54,5 @@ jobs:
             * Packages: ${{ env.packages }}
             
           files: |
-            bin/*  
+            bin/*
+            files/etc/version

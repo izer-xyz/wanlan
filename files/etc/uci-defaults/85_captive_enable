@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo $0: activate captive portal on port 80 >> /dev/kmsg
+
 [ "`uci get firewall.captive.name`" == "" ] || exit 0 # only enable if not defined
 
 uci -q del firewall.captive

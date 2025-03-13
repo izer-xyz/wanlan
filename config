@@ -3,7 +3,7 @@ image=bcm27xx-bcm2708
 
 openwrt_version=24.10.0
 
-packages=zerotier curl luci usbutils kmod-usb-dwc2 kmod-usb-gadget kmod-usb-gadget-eth -partx-utils -ppp -ppp-mod-pppoe 
+packages=zerotier curl luci kmod-gpio-button-hotplug kmod-usb-dwc2 kmod-usb-gadget kmod-usb-gadget-eth -partx-utils -ppp -ppp-mod-pppoe 
 
 disabled_services=
 

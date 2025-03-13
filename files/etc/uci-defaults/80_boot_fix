@@ -1,7 +1,10 @@
 #!/bin/sh 
 
-echo $0 >> /dev/kmsg
+echo $0: update boot parameters and flag reboot >> /dev/kmsg
 cat /boot/cmdline.txt >> /dev/kmsg
+
+grep -qF 'modules-load=dwc2,g_ether' /boot/cmdline.txt \
+  || touch /tmp/reboot
 
 grep -qxF 'dtoverlay=dwc2' /boot/config.txt \
    || echo 'dtoverlay=dwc2' >> /boot/config.txt

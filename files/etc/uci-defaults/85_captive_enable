@@ -14,8 +14,9 @@ uci set firewall.captive.src_ip='!192.168.1.1'
 uci set firewall.captive.dest_ip='192.168.1.1'
 uci set firewall.captive.dest_port='81'
 
+uci set uhttpd.captive=uhttpd
 uci set uhttpd.captive.home='/www/captive'
-uci add_list uhttpd.captive.listen_http='0.0.0.0:81'
+uci add_list uhttpd.captive.listen_http='81'
 uci add_list uhttpd.captive.interpreter='.cgi=/bin/sh'
 uci add_list uhttpd.captive.index_page='redirect.cgi'
 

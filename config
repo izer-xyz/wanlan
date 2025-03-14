@@ -7,4 +7,4 @@ packages=zerotier curl luci px5g-mbedtls kmod-gpio-button-hotplug kmod-usb-dwc2 
 
 disabled_services=
 
-debug=
+debug=1

@@ -3,6 +3,8 @@
 # use dhcp on wan (the below wifi)
 uci set network.wan=interface
 uci set network.wan.proto='dhcp'
+uci set network.wan.peerdns='0'
+uci add_list network.wan.dns='1.1.1.1'
 
 # cleanu default/stock wifi
 uci del wireless.default_radio0

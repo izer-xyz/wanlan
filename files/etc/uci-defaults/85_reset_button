@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo $0: swap shutdown and reset buttons > /dev/kmsg
+echo $0: use GPIO 3 to reboot or factory reset  > /dev/kmsg
+
+grep reboot /etc/rc.button/reset && \
+     mv /etc/rc.button/shutdown /etc/rc.button/reset~ \
+  && mv /etc/rc.button/reset /etc/rc.button/shutdown \
+  && mv /etc/rc.button/reset~ /etc/rc.button/reset
+
+exit 0

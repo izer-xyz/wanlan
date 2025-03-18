@@ -32,7 +32,7 @@ uci set firewall.captives.dest_port='8443'
 uci set uhttpd.captive=uhttpd
 uci set uhttpd.captive.home='/www/captive'
 uci add_list uhttpd.captive.listen_http='8080'
-uci add_list uhttpd.captive.listen_https='8084'
+uci add_list uhttpd.captive.listen_https='8443'
 uci add_list uhttpd.captive.interpreter='.cgi=/bin/sh'
 uci add_list uhttpd.captive.index_page='redirect.cgi'
 uci add_list uhttpd.captive.error_page='/'

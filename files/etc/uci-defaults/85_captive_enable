@@ -38,7 +38,7 @@ uci add_list uhttpd.captive.error_page='/'
 uci set uhttpd.captive.cert='/etc/uhttpd.crt'
 uci set uhttpd.captive.key='/etc/uhttpd.key'
 
-echo address=/#/100.64.64.64 >> /etc/dnsmasq.conf
+echo "address=/#/100.64.64.64" >> /etc/dnsmasq.conf
 
 # uci add_list dhcp.lan.dhcp_option='114,http://192.168.1.1'
 

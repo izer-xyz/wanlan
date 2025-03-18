@@ -22,6 +22,8 @@ uci add_list uhttpd.captive.listen_http='81'
 uci add_list uhttpd.captive.interpreter='.cgi=/bin/sh'
 uci add_list uhttpd.captive.index_page='redirect.cgi'
 
+uci add_list dhcp.lan.dhcp_option='114,http://192.168.1.1'
+
 uci commit firewall
 uci commit uhttpd
 

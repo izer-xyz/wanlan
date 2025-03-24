@@ -1,4 +1,4 @@
-# This file is from the default image to store audio state
+# This file is from the default image
 
 [ -e /tmp/reboot ] && reboot & 
 

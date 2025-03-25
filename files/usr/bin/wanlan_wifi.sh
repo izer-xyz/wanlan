@@ -34,9 +34,13 @@ uci set wireless.wifinet1.key="$2"
 uci set firewall.captive.enabled='0'
 uci set firewall.captives.enabled='0'
 
+grep -q '^address=/#/' /etc/dnsmasq.conf \
+ || sed -i 's/^address=/#address=/g' /etc/dnsmasq.conf
+
 uci commit firewall
 uci commit network
 uci commit wireless
 
 service firewall restart
 service network reload
+service dnsmasq restart

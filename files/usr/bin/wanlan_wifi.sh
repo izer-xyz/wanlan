@@ -35,7 +35,7 @@ uci set firewall.captive.enabled='0'
 uci set firewall.captives.enabled='0'
 
 grep -q '^address=/#/' /etc/dnsmasq.conf \
- || sed -i 's/^address=/#address=/g' /etc/dnsmasq.conf
+ && sed -i 's/^address=/#address=/g' /etc/dnsmasq.conf
 
 uci commit firewall
 uci commit network
